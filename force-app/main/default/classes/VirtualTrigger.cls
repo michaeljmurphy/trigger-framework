@@ -61,9 +61,8 @@ public virtual class VirtualTrigger {
                     op.filterRecords(); 
                     op.execute();
                 } catch (Exception e) {
-                    ChatterExceptionLogger.asyncInsertException(String.valueOf(op).split(':')[0]
-                                                                , String.valueOf(e.getLineNumber())
-                                                                , e.getMessage());
+                    // you could add an exception logger here..
+
                     throw new VirtualTriggerException('Trigger Error: ' + e.getMessage());
                 }
             }

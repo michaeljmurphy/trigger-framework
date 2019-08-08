@@ -5,7 +5,7 @@ This is a simple trigger framework for Apex development.
 ## Trigger Example
 
 
-```apex
+```java
 trigger CaseTrigger on Case (before update, before insert, after update, after insert) {
     VirtualTrigger dispatcher = new VirtualTrigger();
 
@@ -36,7 +36,7 @@ trigger CaseTrigger on Case (before update, before insert, after update, after i
 
 ## Trigger Helper Example
 
-```apex
+```java
 public with sharing class SomeHelperTH extends AbstractTrigger {
 
 	public SomeHelperTH(List<SObject> newTrig) {
